@@ -1,11 +1,8 @@
 name: Android CI
 
 on:
-  push:
-    branches: [ master, develop ]
-  pull_request:
-    branches: [ master, develop ]
-  workflow_dispatch:  # Allow manual trigger
+  workflow_call:  # Only reusable
+  workflow_dispatch:  # Allow manual trigger for debugging
 
 jobs:
   unit-tests:
