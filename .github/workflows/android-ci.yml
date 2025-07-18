@@ -1,0 +1,15 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/android-unit-tests.yml
+
+  # instrumented-tests:
+  #   uses: ./.github/workflows/android-instrumented-tests.yml
